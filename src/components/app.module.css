@@ -1,0 +1,22 @@
+/* App.module.css */
+
+/* Стилі для інформації та повідомлень про помилку */
+.resultInfo {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .resultInfo p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .errorMessage {
+    margin-top: 20px;
+    color: red;
+    font-size: 18px;
+  }
+  
