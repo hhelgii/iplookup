@@ -1,22 +1,19 @@
-/* App.module.css */
 
-/* Стилі для інформації та повідомлень про помилку */
-.resultInfo {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.container{
+    text-align: center;
+}
+.appContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 222px;
+   padding: 0 200px;
+  }
+  .leftContainer{
+    align-items: center;
   }
   
-  .resultInfo p {
-    margin: 5px 0;
-    font-size: 16px;
-  }
   
-  .errorMessage {
-    margin-top: 20px;
-    color: red;
-    font-size: 18px;
-  }
-  
+ .rightContainer{
+    text-align: start;
+ }
