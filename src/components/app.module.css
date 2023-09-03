@@ -1,6 +1,7 @@
 
 .container{
     text-align: center;
+    color: #007bff;
 }
 .appContainer {
     display: flex;
@@ -11,9 +12,16 @@
   }
   .leftContainer{
     align-items: center;
+    
   }
   
   
  .rightContainer{
     text-align: start;
+    font-weight: 700;
+ }
+ .errorMessage{
+    color: red;
+    font-size: xx-large;
+
  }
