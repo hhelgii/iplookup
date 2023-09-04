@@ -24,4 +24,16 @@
     border: none;
     cursor: pointer;
   }
-  
+  @media screen and (max-width: 680px) {
+    .inputField {
+      padding: 4px;
+      margin-right: 5px;
+      font-size: small;
+      width: 120px;
+    }
+    
+    .button {
+      padding: 4px 8px;
+      font-size: small;
+    }
+  }

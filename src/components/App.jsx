@@ -5,14 +5,16 @@ import { Form } from './form/form';
 import { fetchInfo } from 'services/api';
 import apiInfo from 'services/apiInfo';
 import styles from './app.module.css';
-
+import Notiflix from 'notiflix';
 export const App = () => {
   const [inputIpValue, setInputIpValue] = useState('');
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
 
   const handleInputChange = (event) => {
+    
     setInputIpValue(event.target.value);
+    setError('')
   };
 
   const handleIpLookup = async (event) => {
@@ -22,7 +24,7 @@ export const App = () => {
       setResult(null);
       return;
     }
-
+    
     try {
       const data = await fetchInfo(inputIpValue, apiInfo.API_KEY);
       setResult(data);
@@ -41,7 +43,7 @@ export const App = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Enter the IP address and click the button!</h1>
+      <h1 className={styles.title}>Enter the IP address and click the button!</h1>
       <div className={styles.appContainer}>
         
         <div className={styles.leftContainer}>
@@ -62,7 +64,7 @@ export const App = () => {
               <p>Timezone: {result.timezone}</p>
             </div>
           )}
-          {error && <p className={styles.errorMessage}>Error: {error}</p>}
+          {error && Notiflix.Report.failure(error)}
         </div>
       </div>
     </div>
