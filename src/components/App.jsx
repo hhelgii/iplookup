@@ -57,8 +57,8 @@ export const App = () => {
               <p>IP Address: {result.address}</p>
               <p>Country: {result.country}</p>
               <p>City: {result.city}</p>
-              <p>Latitude: {result.latitude}</p>
-              <p>Longitude: {result.longitude}</p>
+              <p>Latitude: {result.latitude?result.latitude:'No info'}</p>
+              <p>Longitude: {result.longitude?result.longitude:'No info'}</p>
               <p>Timezone: {result.timezone}</p>
             </div>
           )}
